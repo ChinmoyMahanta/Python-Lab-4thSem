@@ -1,0 +1,50 @@
+# 15. Multiply all the numbers in a list
+numbers = [1, 2, 3, 4]
+result = 1
+for num in numbers:
+    result *= num
+print("Product of list elements:", result)
+
+# 16. Check if a number is perfect
+num = int(input("Enter a number: "))
+sum_of_divisors = 0
+for i in range(1, num):
+    if num % i == 0:
+        sum_of_divisors += i
+if sum_of_divisors == num:
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+
+# 17. Check if a string is a palindrome
+string = input("Enter a string: ")
+reversed_string = string[::-1]
+if string == reversed_string:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+# 18. Check if a string is a pangram
+import string
+sentence = input("Enter a sentence: ")
+alphabet = set(string.ascii_lowercase)
+sentence_letters = set(sentence.lower())
+
+if alphabet <= sentence_letters:
+    print("Pangram")
+else:
+    print("Not a Pangram")
+
+# 19. Sum of the digits of a number
+num = int(input("Enter a number: "))
+sum_of_digits = 0
+for digit in str(abs(num)):
+    sum_of_digits += int(digit)
+print("Sum of digits:", sum_of_digits)
+
+# 20. Generate a list of four random numbers
+import random
+random_numbers = []
+for _ in range(4):
+    random_numbers.append(random.randint(0, 100))
+print("Random Numbers:", random_numbers)
