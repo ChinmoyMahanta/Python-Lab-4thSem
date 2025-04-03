@@ -1,0 +1,53 @@
+Exercise programs on basic control structures & loops
+
+21. Print decimal equivalents of 1/2 to 1/10
+for i in range(2, 11):
+    print(f"1/{i} = {1/i:.2f}")
+
+22. Find the biggest number among three numbers
+a, b, c = map(int, input("Enter three numbers: ").split())
+print(f"Largest number is: {max(a, b, c)}")
+
+23. Countdown from a given number to zero
+num = int(input("Enter a number: "))
+while num >= 0:
+    print(num)
+    num -= 1
+
+Exercise programs on operators & I/O operations.
+
+24. Sum of two numbers using command-line arguments
+import sys
+if len(sys.argv) != 3:
+    print("Usage: python script.py num1 num2")
+else:
+    num1, num2 = map(int, sys.argv[1:])
+    print(f"Sum: {num1 + num2}")
+
+25. Demonstrate various Python operators
+a, b = 10, 3
+print(f"Addition: {a + b}")
+print(f"Subtraction: {a - b}")
+print(f"Multiplication: {a * b}")
+print(f"Division: {a / b}")
+print(f"Floor Division: {a // b}")
+print(f"Modulus: {a % b}")
+print(f"Exponentiation: {a ** b}")
+print(f"Comparison: {a > b}")
+print(f"Logical AND: {a > 5 and b < 5}")
+print(f"Bitwise AND: {a & b}")
+print(f"Bitwise OR: {a | b}")
+
+26. Check if a person is eligible to vote
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("Eligible for voting")
+else:
+    print("Not eligible for voting")
+
+27. Check if a year is a leap year
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year")
+else:
+    print(f"{year} is NOT a Leap Year")
