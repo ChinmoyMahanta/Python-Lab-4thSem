@@ -1,0 +1,70 @@
+1. WAP using Python implementation of any arithmetic and quadratic operation
+
+import math
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Addition:", a + b)
+print("Multiplication:", a * b)
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
+discriminant = b**2 - 4*a*c
+if discriminant >= 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print("Roots are:", root1, "and", root2)
+else:
+    print("No real roots.")
+
+
+2. Implementation of linear equation
+
+m = float(input("Enter the slope (m): "))
+c = float(input("Enter the y-intercept (c): "))
+x = float(input("Enter the value of x: "))
+y = m * x + c
+print("The value of y is:", y)
+
+
+3. Using mathematical functions for graphical representation
+
+import matplotlib.pyplot as plt
+x = list(range(-10, 11)) 
+y = [i**2 for i in x]    
+plt.plot(x, y, marker='o')
+plt.title("Graph of y = x²")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
+
+
+4. WAP to implement function
+
+# Function to find factorial
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
+
+num = int(input("Enter a number: "))
+print("Factorial:", factorial(num))
+
+
+5. Using standard Tkinter, make any formatted application (e.g., Calculator)
+
+import tkinter as tk
+def add():
+    res = int(entry1.get()) + int(entry2.get())
+    result_label.config(text=f"Result: {res}")
+window = tk.Tk()
+window.title("Simple Adder")
+entry1 = tk.Entry(window)
+entry2 = tk.Entry(window)
+entry1.pack()
+entry2.pack()
+add_button = tk.Button(window, text="Add", command=add)
+add_button.pack()
+result_label = tk.Label(window, text="Result: ")
+result_label.pack()
+window.mainloop()
